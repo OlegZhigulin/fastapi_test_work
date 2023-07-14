@@ -1,0 +1,5 @@
+fastapi[all]
+flake8==6.0.0
+mypy==1.4.1
+autopep8==2.0.2
+asyncpg==0.28.0

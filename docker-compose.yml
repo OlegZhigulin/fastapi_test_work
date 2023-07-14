@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:13.0-alpine
+    container_name: Postgress
+    env_file:
+      - .env-example
+  web:
+    build: .
+    container_name: FastApiTest
+    restart: always
+    ports:
+     - "8000:8000"
+    depends_on:
+      - db
